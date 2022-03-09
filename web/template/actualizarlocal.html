@@ -1,0 +1,69 @@
+<html>
+<head>
+    <title>actualizarlocal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/login.css" rel="stylesheet" media="screen">
+</head>
+<body>
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h1>Actualizar local</h1>
+        <div class="fadeIn first">
+            <img src="static/img/logo.png" height="120" width="98"/>
+        </div>
+        <!-- Login Form -->
+        <form action="" method="post" autocomplete="off">
+            <input type="number"
+                   id="num"
+                   class="fadeIn second"
+                   name="num"
+                   placeholder="ID del local"
+                   value="{{ request.form.num }}">
+            <input type="text"
+                   id="name"
+                   class="fadeIn third"
+                   name="name"
+                   placeholder="nombre de local"
+                   value="{{ request.form.name }}">
+            <input type="text"
+                   id="direccion"
+                   class="fadeIn third"
+                   name="direccion"
+                   placeholder="direccion de local"
+                   value="{{ request.form.direccion }}">
+			<input type="tel"
+                   id="telefono"
+                   class="fadeIn fourth"
+                   name="telefono"
+                   placeholder="telefono de local"
+                   value="{{ request.form.telefono }}">
+             <input id="email"
+                   type="email"
+                   class="fadeIn fourth"
+                   name="email"
+                   placeholder="correo del local"
+                   value="{{request.form.email }}" >
+			<input id="ig"
+                   type="url"
+                   class="fadeIn fourth"
+                   name="ig"
+                   placeholder="URL de instagram del local"
+                   value="{{request.form.ig }}" >
+            <input id="info"
+                   type="text"
+                   class="fadeIn fourth"
+                   name="info"
+                   placeholder="Datos del lugar"
+                   value="{{request.form.info }}">
+
+            <input type="submit" class="fadeIn fourth" value="Entrar">
+        </form>
+        {% if error %}
+        <p><strong>Error:</strong> {{ error }}</p>
+        {% endif %}
+
+    </div>
+</div>
+</body>
+
+</html>

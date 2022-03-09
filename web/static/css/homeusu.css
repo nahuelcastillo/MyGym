@@ -1,0 +1,68 @@
+html {
+background-image: linear-gradient(to right top, #5a75f9, #5666c6, #4f5796, #464867, #3a3a3b);
+}
+
+.usu{
+    background-color: #5a75f9;
+    width: 30%;
+    height: 62rem;
+  	float: right;
+  	-webkit-box-shadow: 5px 5px 15px 5px #000000;
+    box-shadow: 5px 5px 15px 5px #000000;
+    border: 5px inset #000000;
+    border-radius: 40px;
+}
+
+
+.parr {
+    text-align: center;
+    font-family: georgia;
+    size: large;
+    weight: bolder;
+    font-size: 25px;
+}
+
+.cam {
+text-align:center;
+weight: bolder;
+font-size: 25px;
+border: 5px solid #000000;
+border-radius: 40px 40px 40px 0px;
+background: #FFFFFF none no-repeat scroll 0 0;
+}
+
+
+
+.myButton {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	padding:11px 23px;
+
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.parti{
+    text-align: center;
+    font-family: georgia;
+    size: large;
+    weight: bolder;
+    font-size: 30px;
+}

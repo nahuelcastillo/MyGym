@@ -1,0 +1,13 @@
+html {
+background-image: linear-gradient(to left, #6737f0, #8444ed, #9b52eb, #ad61e9, #bd70e8, #b575dc, #ad79d0, #a67cc4, #8c73a8, #75688c, #615d6f, #515151);
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+    font-size: 40px;
+}
+

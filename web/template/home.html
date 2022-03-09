@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link href="static/css/inicio.css" rel="stylesheet" media="screen">
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+    <script src="//code.jquery.com/jquery-latest.min.js"></script>
+    <script src="static/js/jquery.slides.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Spartan&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+
+
+    <script>
+   $(function(){
+  $(".slides").slidesjs({
+    play: {
+      active: true,
+        // [boolean] Generate the play and stop buttons.
+        // You cannot use your own buttons. Sorry.
+      effect: "slide",
+        // [string] Can be either "slide" or "fade".
+      interval: 5000,
+        // [number] Time spent on each slide in milliseconds.
+      auto: false,
+        // [boolean] Start playing the slideshow on load.
+      swap: true,
+        // [boolean] show/hide stop and play buttons
+      pauseOnHover: false,
+        // [boolean] pause a playing slideshow on hover
+      restartDelay: 2500
+        // [number] restart delay on inactive slideshow
+    }
+  });
+});
+  </script>
+
+</head>
+<body>
+
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+        <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li>  <a href="{{ url_for('registro') }}">Singup</a> </li>
+             <li>  <a href="{{ url_for('login') }}">login</a> </li>
+             <li>  <a href="{{ url_for('info') }}">Info</a> </li>
+        </ul>
+</nav>
+
+
+
+<header class="mensaje">
+    <img src="static/img/logo.png"  class="imaj"/>
+    <p>
+        MyGym es una app que busca lograr una integridad entre el usuario y la administración de un local/Gym/profesor particular.
+    </p>
+    <p>
+        Esta integridad la logra creando un sector para que el usuario busque y encuentre el gym que se adapte a sus necesidades sumándole un seguimiento por parte del local a este usuario que esta inscripto a dicho local, dentro de este seguimiento hay cosas como lista personalizada de los ejercicios que debe realizar los días y hora en las que le toca entrenar, fecha de pagos, etc.
+    </p>
+
+</header>
+
+
+
+<div class="main">
+		<div class="slides">
+    <figure><img src="static/img/gym3.jpg" alt=""></figure>
+    <figure><img src="static/img/gym4.jpg" alt=""></figure>
+    <figure><img src="static/img/gym5.jpg" alt=""></figure>
+        </div>
+
+</div>
+
+</body>
+</html>

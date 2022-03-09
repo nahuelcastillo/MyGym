@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>usuariohome</title>
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+    <link href="static/css/homeusu.css" rel="stylesheet" media="screen">
+     <style type="text/css">
+        a:link, a:visited, a:active {
+            text-decoration:none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+        <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li>  <a href="{{ url_for('info') }}" >info</a> </li>
+             <li> <img  src="static/img/47774.png"> {{ nombre }}
+                <ul>
+                    <li> <a href="{{ url_for('homeusuario') }}">Perfil</a>  </li>
+                    <li> <a href="{{ url_for('buscarlocal') }}">Buscar local</a>  </li>
+                    <li> <a href="{{ url_for('listadolocal') }}">Listado de local</a>  </li>
+                    <li> <a href="{{ url_for('crearlocal') }}">Crear local</a>  </li>
+                    <li> <a href="{{ url_for('actualizarusuario') }}">actualizar datos usuario</a>  </li>
+                    <li> <a href="{{ url_for('actualizarlocal') }}">actualizar local</a>  </li>
+                    <li> <a href="{{ url_for('logout') }}">logout</a>  </li>
+                </ul>
+            </li>
+        </ul>
+</nav>
+
+
+<header class="usu">
+<div class="parti">
+            <p class="parti"> Info de {{ nombre }} </p>
+    </div>
+
+
+<div class="parr">
+            <p class="par">Edad:</p>
+    </div>
+
+    <div class="cam">
+    {% for dato in dato %}
+    <p> {{ dato.edad }} </p>
+        {% endfor %}
+    </div>
+
+<div class="parr">
+            <p class="par">Cumpleaños:</p>
+    </div>
+
+    <div class="cam">
+    {% for dato in dato %}
+    <p> {{ dato.año }} </p>
+        {% endfor %}
+    </div>
+
+    <div class="parr">
+            <p class="par">Peso:</p>
+    </div>
+
+    <div class="cam">
+    {% for dato in dato %}
+    <p> {{ dato.peso }} </p>
+        {% endfor %}
+    </div>
+
+    <div class="parr">
+            <p class="par">altura:</p>
+    </div>
+
+    <div class="cam">
+    {% for dato in dato %}
+    <p> {{ dato.altura }} </p>
+        {% endfor %}
+    </div>
+
+    <div class="parr">
+            <p class="par">Info general:</p>
+    </div>
+
+    <div class="cam">
+    {% for dato in dato %}
+    <p> {{ dato.infogen }} </p>
+        {% endfor %}
+    </div>
+
+    <div class="myButton">
+      <a href="{{ url_for('modificardatosusu') }}">Configurar datos</a>
+    </div>
+
+
+
+</header>
+
+
+
+<iframe src="https://calendar.google.com/calendar/embed?height=300&wkst=1&bgcolor=%23ffffff&ctz=America%2FMontevideo&showTitle=0&showPrint=0&showTabs=0&showCalendars=0&showTz=0&src=Y2Y5djFqM2QydGFrbDdoMnA1MGljZWM3YjRAZ3JvdXAuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&src=ZXMtNDE5LnV5I2hvbGlkYXlAZ3JvdXAudi5jYWxlbmRhci5nb29nbGUuY29t&src=ZXMudXkjaG9saWRheUBncm91cC52LmNhbGVuZGFyLmdvb2dsZS5jb20&src=Y2xhc3Nyb29tMTAxNjA4MDUyMDEyMDk4NzUyNzc5QGdyb3VwLmNhbGVuZGFyLmdvb2dsZS5jb20&color=%23D81B60&color=%230B8043&color=%230B8043&color=%23202124" style="border:solid 1px #777" width="400" height="300" frameborder="0" scrolling="no"></iframe>
+
+
+
+</body>
+</html>
+

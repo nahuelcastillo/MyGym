@@ -1,0 +1,60 @@
+html {
+    background-image: linear-gradient(to right top, #5a75f9, #5666c6, #4f5796, #464867, #3a3a3b);
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+{
+	margin:0;
+	padding:0;
+}
+
+
+.main {
+	width:50%;
+	margin:20px auto;
+}
+
+.slides {
+	width:100%;
+}
+
+.slides img {
+	width:100%;
+}
+
+.slidesjs-pagination {
+	list-style:none;
+	overflow:hidden;
+}
+
+.slidesjs-pagination li {
+	float:left;
+}
+
+.slidesjs-pagination li a {
+	display:block;
+	padding:10px 20px;
+	color:#fff;
+	text-decoration:none;
+}
+
+.slidesjs-pagination li a:hover {
+	background:#000;
+}
+
+.slidesjs-navigation{
+	color:#fff;
+	text-decoration:none;
+	display:inline-block;
+	padding:13.5px 20px;
+	float:right;
+}
+
+
+

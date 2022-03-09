@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>datosusuario</title>
+
+	<link href="static/css/datosusuario.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+
+<div class="wrapper fadeInDown">
+	<div id="formContent">
+        <div class="fadeIn first">
+		<img src="static/img/gympng.png" alt="" height="120" width="120"/>
+        </div>
+		<h2>Mejora tu perfil</h2>
+
+<form action="" method="post" autocomplete="off">
+            <p>Edad:</p>
+            <input type="text"
+                   id="edad"
+                   class="fadeIn second"
+                   name="edad"
+                   placeholder="EJ: 20 años"
+                   value="{{ request.form.edad }}">
+            <p>fecha de cumpleaños:</p>
+            <input type="text"
+                   id="cumpl"
+                   class="fadeIn third"
+                   name="cumpl"
+                   placeholder="EJ: Dia/Mes/Año"
+                   value="{{ request.form.cumpl }}">
+            <p>peso:</p>
+            <input type="text"
+                   id="peso"
+                   class="fadeIn third"
+                   name="peso"
+                   placeholder="EJ: peso 60kg "
+                   value="{{ request.form.peso }}">
+            <p>altura:</p>
+              <input type="text"
+                   id="altura"
+                   class="fadeIn second"
+                   name="altura"
+                   placeholder="EJ: 190cm"
+                   value="{{ request.form.altura }}">
+             <p>Informacion general:</p>
+              <input type="text"
+                   id="info"
+                   class="fadeIn second"
+                   name="info"
+                   placeholder="EJ: hola soy sr.Bot, me gusta el tenis, salgo a correr"
+                   value="{{ request.form.info }}">
+
+            <input type="submit" class="fadeIn fourth" value="Entrar">
+        </form>
+        {% if error %}
+        <p><strong>Error:</strong> {{ error }}</p>
+        {% endif %}
+
+        <div id="formFooter">
+            <a href="{{ url_for('registro') }}">Registrarse</a>
+            <p>bienvenido</p>
+        </div>
+
+    </div>
+</div>
+</body>
+</html>

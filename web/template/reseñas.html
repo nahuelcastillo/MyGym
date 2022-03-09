@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>reseñas</title>
+    <link href="static/css/reseña.css" rel="stylesheet" media="screen">
+
+</head>
+<body>
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h1>Formulario de reseña</h1>
+          <h4>Local: {{ numero }}</h4>
+        <div class="fadeIn first">
+            <img src="static/img/logo.png" height="120" width="98"/>
+        </div>
+        <!-- Login Form -->
+        <form action="" method="post" autocomplete="off">
+            <input type="text"
+                   id="login"
+                   class="fadeIn second"
+                   name="login"
+                   placeholder="reseña"
+                   value="{{ request.form.login }}">
+
+            <input type="submit" class="fadeIn fourth" value="Enviar">
+        </form>
+
+        <div id="formFooter">
+            <p>Gracias por hacer tu reseña</p>
+        </div>
+
+</body>
+</html>

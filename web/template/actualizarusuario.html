@@ -1,0 +1,60 @@
+<html>
+<head>
+    <title>actualizarlocal</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="static/css/login.css" rel="stylesheet" media="screen">
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+         <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li>  <a href="{{ url_for('info') }}">Info</a> </li>
+             <li> <a href="{{ url_for('homeusuario') }}">Perfil</a>  </li>
+        </ul>
+</nav>
+
+
+
+<div class="wrapper fadeInDown">
+    <div id="formContent">
+        <h1>Actualizar datos usuario</h1>
+        <div class="fadeIn first">
+            <img src="static/img/logo.png" height="120" width="98"/>
+        </div>
+        <!-- Login Form -->
+        <form action="" method="post" autocomplete="off">
+            <input type="text"
+                   id="login"
+                   class="fadeIn second"
+                   name="login"
+                   placeholder="usuario"
+                   value="{{ request.form.login }}">
+            <input type="text"
+                   id="password"
+                   class="fadeIn third"
+                   name="password"
+                   placeholder="contraseña"
+                   value="{{ request.form.password }}">
+             <input id="email"
+                   type="email"
+                   class="fadeIn fourth"
+                   name="email"
+                   placeholder="Tu correo electronico."
+                   value="{{request.form.email }}" >
+            <input type="submit" class="fadeIn fourth" value="Entrar">
+        </form>
+        {% if error %}
+        <p><strong>Error:</strong> {{ error }}</p>
+        {% endif %}
+
+
+
+    </div>
+</div>
+</body>
+
+</html>

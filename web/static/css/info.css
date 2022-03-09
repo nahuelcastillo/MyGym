@@ -1,0 +1,40 @@
+html{
+background: #9195A3;
+background: -moz-linear-gradient(top, #9195A3 0%, #A3A8B8 50%, #B3B8C9 100%);
+background: -webkit-linear-gradient(top, #9195A3 0%, #A3A8B8 50%, #B3B8C9 100%);
+background: linear-gradient(to bottom, #9195A3 0%, #A3A8B8 50%, #B3B8C9 100%);
+}
+
+.parr{
+    background-color: #ffffff;
+    width: 80%;
+    height: 160rem;
+    border: 5px solid #000000;
+    border-radius: 40px;
+    background-position: 50% 50%;
+    margin: 5px 110px 0 110px
+}
+
+.parr p{
+    text-align: center;
+    font-size: 25px;
+    border: 5px double rgba(0,0,0,0.62);
+    border-radius: 40px;
+}
+
+.parr h1{
+    text-align: center;
+}
+
+.parr h2{
+    text-align: center;
+}
+
+.img1{
+     margin: 3px 2px 0 150px
+}
+
+.img2 {
+    margin: 3px 20px 0 280px
+}
+

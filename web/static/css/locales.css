@@ -1,0 +1,87 @@
+html {
+background-color: #dbebde;
+background-image: -webkit-linear-gradient(120deg, #dbebde 50%, #f8f8f8 45%);
+min-height: 400px;
+}
+
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+.parr {
+    text-align:center;
+    font-family: georgia;
+    size: large;
+    weight: bolder;
+    text-decoration: underline;
+    font-size: 35px;
+}
+
+.cam {
+text-align:center;
+weight: bolder;
+color: #0000ff;
+font-size: 25px;
+border: 7px outset #A49292;
+border-radius: 0px 40px 40px 40px;
+}
+
+
+.usu{
+    background-color: #dbebde;
+    width: 45%;
+    height: 100rem;
+  	float: right;
+  	border: 7px outset #000000;
+    border-radius: 40px 40px 40px 40px;
+}
+
+.usu:image{
+float:center;
+}
+
+.myButton {
+	box-shadow:inset 0px 1px 3px 0px #91b8b3;
+	background:linear-gradient(to bottom, #768d87 5%, #6c7c7c 100%);
+	background-color:#768d87;
+	border-radius:5px;
+	border:1px solid #566963;
+	display:inline-block;
+	cursor:pointer;
+	color:black;
+	font-family:Arial;
+	font-size:15px;
+	padding:11px 23px;
+}
+
+.myButton:hover {
+	background:linear-gradient(to bottom, #6c7c7c 5%, #768d87 100%);
+	background-color:#6c7c7c;
+}
+
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+.lis{
+    background: #DBDBDB none no-repeat scroll 0 0;
+    border: 7px solid rgba(0,0,0,0.64);
+    border-radius: 40px;
+    width: 96%;
+    height: 200rem;
+  	text-align:center;
+  	margin: 20px
+}
+
+.lis p{
+    font-size: 23px;
+    font-family: georgia;
+    size: large;
+    weight: bolder;
+}

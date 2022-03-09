@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Locales</title>
+    <link href="static/css/locales.css" rel="stylesheet" media="screen">
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+    <style type="text/css">
+        a:link, a:visited, a:active {
+            text-decoration:none;
+            color: black;
+        }
+    </style>
+</head>
+<body>
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+        <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li> <a href="{{ url_for('info') }}">Info</a>  </li>
+             <li> <img  src="static/img/47774.png"> {{ nombre }}  <i class="icon ion-md-arrow-dropdown"></i>
+                <ul>
+                    <li> <a href="{{ url_for('homeusuario') }}">Perfil</a>  </li>
+                    <li> <a href="{{ url_for('buscarlocal') }}">Buscar local</a>  </li>
+                    <li> <a href="{{ url_for('listadolocal') }}">Listado de local</a>  </li>
+                    <li> <a href="{{ url_for('crearlocal') }}">Crear local</a>  </li>
+                    <li> <a href="{{ url_for('actualizarusuario') }}">Actualizar datos usuario</a>  </li>
+                    <li> <a href="{{ url_for('actualizarlocal') }}">Actualizar local</a>  </li>
+                    <li> <a href="{{ url_for('logout') }}">logout</a>  </li>
+                </ul>
+            </li>
+        </ul>
+</nav>
+
+
+<div>
+        <form action="" method="post" autocomplete="off">
+         <input    type="text"
+                   id="buscar"
+                   name="buscar"
+                   placeholder="Buscar local"
+                   value="{{ request.form.buscar }}">
+        <input type="submit" class="fadeIn second" value="bucar">
+        </form>
+</div>
+
+
+
+<header class="usu">
+
+    <img src="static/img/logo,local.png" width="200" height="200">
+
+
+<div class="parr">
+            <p class="par">Nombre del local:</p>
+    </div>
+
+    <div class="cam">
+    <p> {{ local.nombreLocal }} </p>
+    </div>
+
+<div class="parr">
+            <p class="parr">Direccion del local:</p>
+</div>
+
+    <div class="cam">
+    <p> {{ local.direccion }} </p>
+    </div>
+
+<div class="parr">
+            <p class="parr">Telefono:</p>
+</div>
+
+    <div class="cam">
+    <p> {{ local.telefono }} </p>
+    </div>
+
+
+    <div class="parr">
+            <p class="parr">Correo electronico:</p>
+</div>
+
+    <div class="cam">
+    <p>  {{ local.correoelectronico }} </p>
+    </div>
+
+<div class="parr">
+            <p class="parr">Link del instagram:</p>
+</div>
+
+    <div class="cam">
+    <p> {{ local.instagram }} </p>
+    </div>
+
+    <div class="parr">
+            <p class="parr">Info del local:</p>
+</div>
+    <div class="cam">
+    <p> {{ local.info }} </p>
+    </div>
+
+    <div class="myButton">
+      <a href="{{ url_for('eliminar_local') }}">Eliminar</a>
+    </div>
+
+
+</header>
+
+
+
+<iframe src="https://www.google.com/maps/embed?pb=!1m10!1m8!1m3!1d13085.638928670902!2d-56.161567582477836!3d-34.92125972514977!3m2!1i1024!2i768!4f13.1!5e0!3m2!1ses-419!2suy!4v1637772823979!5m2!1ses-419!2suy" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+
+
+
+<header class="reseña">
+
+    <div class="myButton">
+      <a href="{{ url_for('reseñas') }}">Crear reseña</a>
+    </div>
+
+<h1> Reseñas de usuarios </h1>
+    {% for reseña in reseña %}
+    <p> Reseña:  {{ reseña.reseña }} ////// Nombre de usuario: {{ reseña.ID_USUARIO }} </p>
+        {% endfor %}
+
+</header>
+
+
+
+</body>
+</html>

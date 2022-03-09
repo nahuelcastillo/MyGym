@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <title>Locales</title>
+    <link href="static/css/locales.css" rel="stylesheet" media="screen">
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+    <link href="static/css/busqueda.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+        <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li>  <a href="{{ url_for('info') }}" >info</a> </li>
+             <li> <img  src="static/img/47774.png"> {{ nombre }}
+                <ul>
+                    <li> <a href="{{ url_for('homeusuario') }}">Perfil</a>  </li>
+                    <li> <a href="{{ url_for('buscarlocal') }}">Buscar local</a>  </li>
+                    <li> <a href="{{ url_for('listadolocal') }}">Listado de local</a>  </li>
+                    <li> <a href="{{ url_for('crearlocal') }}">Crear local</a>  </li>
+                    <li> <a href="{{ url_for('actualizarusuario') }}">actualizar datos usuario</a>  </li>
+                    <li> <a href="{{ url_for('actualizarlocal') }}">actualizar local</a>  </li>
+                    <li> <a href="{{ url_for('logout') }}">logout</a>  </li>
+                </ul>
+            </li>
+        </ul>
+</nav>
+
+    <h1>Encuentra el local que se adapte a tus necesidades</h1>
+
+<div class="box">
+        <form action="" method="post" autocomplete="on">
+         <input    type="text"
+                   id="buscar"
+                   name="buscar"
+                   placeholder="Buscar local"
+                   value="{{ request.form.buscar }}"
+                   size=30
+                   style="width: 70%">
+        <input type="submit" class="fadeIn second" value="Buscar">
+        </form>
+
+</div>
+
+
+
+    <div class="error">
+    {% if error %}
+        <p>{{ error }}</p>
+        {% endif %}
+        </div>
+
+
+</body>
+</html>

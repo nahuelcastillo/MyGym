@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado</title>
+    <link href="static/css/locales.css" rel="stylesheet" media="screen">
+    <link href="static/css/menu.css" rel="stylesheet" media="screen">
+</head>
+<body>
+
+<nav>
+    <img src="static/img/logo.png"  class="imaj"/>
+
+        <ul>
+             <li>  <a href="{{ url_for('inicio') }}" >Inicio</a> </li>
+             <li> <a href="{{ url_for('info') }}">Info</a>  </li>
+             <li> <img  src="static/img/47774.png"> {{ nombre }} <i class="icon ion-md-arrow-dropdown"></i>
+                <ul>
+                    <li> <a href="{{ url_for('homeusuario') }}">Perfil</a>  </li>
+                    <li> <a href="{{ url_for('buscarlocal') }}">Buscar local</a>  </li>
+                    <li> <a href="{{ url_for('listadolocal') }}">Listado de local</a>  </li>
+                    <li> <a href="{{ url_for('crearlocal') }}">Crear local</a>  </li>
+                    <li> <a href="{{ url_for('actualizarusuario') }}">actualizar datos usuario</a>  </li>
+                    <li> <a href="{{ url_for('actualizarlocal') }}">actualizar local</a>  </li>
+                    <li> <a href="{{ url_for('logout') }}">logout</a>  </li>
+                </ul>
+            </li>
+        </ul>
+</nav>
+
+
+
+<div class="box">
+    <h1>Listado de locales</h1>
+    <img src="static/img/manos.jpg" width="500" height="200">
+    <p>Recuerda tu id de local para poder modificar sus datos, tambien tu local esta atado al  id de usuario que lo creo</p>
+    </div>
+
+
+<div class="lis">
+        {% for local in local %}
+            <p> datos de locales ➜ id: {{ local.idlocal }}     ➜    Nombre de local: {{ local.nombreLocal }}    ➜  Direccion: {{ local.direccion }}       ➜  Telefono: {{ local.telefono }}    ➜   Email: {{ local.correoelectronico }} </p>
+        {% endfor %}
+    </div>
+
+</body>
+</html>
